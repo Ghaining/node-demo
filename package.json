@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Ghaining/node-demo/issues"
   },
-  "homepage": "https://github.com/Ghaining/node-demo#readme"
+  "homepage": "https://github.com/Ghaining/node-demo#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
 }
