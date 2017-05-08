@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>test</h1>
+	<button>抽奖</button>
+	<div>
+		<h2></h2>
+		<p></p>
+	</div>
+	<script src="./jquery.min.js"></script>
+	<!-- <script src="bundle.js"></script> -->
+	<script>
+		$(function(){
+			$('button').on('click', function() {
+				$.ajax({
+					url: './getRes',
+					type: 'post',
+					success: function(data) {
+						if(data.code == 200) {
+							$('h2').html(data.data.level);
+							$('p').html(data.data.msg);
+						}
+					}
+				})
+			})
+		})
+	</script>
+</body>
+</html>
